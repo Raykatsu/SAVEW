@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Archive Zine des potes</title>
+<meta name="description" content="Toutes les créations du projet montage de Rayane : vidéos, visuels, fichiers, musiques, outils.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FFD400'/%3E%3Crect x='6' y='9' width='20' height='16' fill='%23111'/%3E%3Crect x='6' y='6' width='20' height='4' fill='%23FF2E88'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&family=JetBrains+Mono:wght@400;600&family=Permanent+Marker&display=swap">
+<style>
+/* Layout : une pile de fiches de fanzine ; chaque fiche = aperçu PNG en couverture, puis ses fichiers à télécharger */
+:root{
+  --paper:#F4ECDA; --ink:#111111; --acid:#FFD400; --pink:#FF2E88; --cyan:#3DF2FF; --glacier:#3D8BFF;
+  --card:#FFFBF0; --muted:#5E5646; --line:#1111111f; --shade:#11111108;
+  --bg:var(--paper); --fg:var(--ink);
+  --f-display:"Anton","Impact","Arial Narrow",sans-serif;
+  --f-body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:"Permanent Marker","Comic Sans MS",cursive;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{--bg:#141210;--fg:#F4ECDA;--card:#1E1B17;--muted:#B5AA94;--line:#F4ECDA22;--shade:#F4ECDA0d;color-scheme:dark}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.5}
+img{max-width:100%}
+[hidden]{display:none!important}
+.wrap{max-width:880px;margin:0 auto;padding-top:calc(28px + env(safe-area-inset-top,0px));padding-bottom:calc(72px + env(safe-area-inset-bottom,0px));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:22px}
+button,input{font:inherit}
+:focus-visible{outline:3px solid var(--glacier);outline-offset:2px}
+header{display:flex;flex-direction:column;gap:6px}
+.kicker{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(44px,11vw,88px);line-height:.9;margin:0;text-transform:uppercase;text-wrap:balance}
+h1 .tape{background:var(--acid);color:#111;padding:0 .12em;display:inline-block;transform:rotate(-1.5deg);box-shadow:4px 4px 0 var(--pink)}
+.scrawl{font-family:var(--f-hand);color:var(--pink);font-size:18px;transform:rotate(-2deg);align-self:flex-start}
+.lede{max-width:62ch;color:var(--muted);margin:0}
+.counts{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.counts b{color:var(--fg);font-weight:600;font-variant-numeric:tabular-nums}
+.btn{font-family:var(--f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;border:1.5px solid var(--fg);background:transparent;color:var(--fg);
+  padding:7px 11px;cursor:pointer;border-radius:0;display:inline-flex;align-items:center;gap:6px;text-decoration:none}
+.btn:hover{background:var(--shade)}
+.bar{display:flex;flex-direction:column;gap:12px;border-top:3px solid var(--fg);border-bottom:1px solid var(--line);padding-block:14px}
+.search{width:100%;font-size:16px;padding:9px 12px;border:2px solid var(--fg);background:var(--card);color:var(--fg);border-radius:0}
+.filters{display:flex;flex-wrap:wrap;gap:6px}
+.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.day{display:flex;flex-direction:column;gap:12px}
+.day h2{font-family:var(--f-display);font-weight:400;font-size:26px;margin:8px 0 0;text-transform:uppercase;display:flex;align-items:baseline;gap:10px}
+.day h2 small{font-family:var(--f-mono);font-size:12px;color:var(--muted);text-transform:none}
+.entry{background:var(--card);border:2px solid var(--fg);padding:14px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.entry.pin{box-shadow:6px 6px 0 var(--acid)}
+.top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.entry h3{margin:0;font-size:18px;font-weight:800;line-height:1.25;text-wrap:balance;min-width:0;flex:1 1 200px}
+.chip{font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding:3px 7px;color:#111;white-space:nowrap}
+.k-video{background:var(--pink);color:#fff}.k-page{background:var(--cyan)}.k-fichier{background:var(--acid)}
+.k-projet{background:#C9B8FF}.k-musique{background:#FF8A1E}.k-outil{background:#9FE3B0}.k-doc{background:#BFE6FF}.k-tache{background:#E8D9B8}
+.entry p{margin:0;max-width:68ch;overflow-wrap:anywhere}
+.cover{position:relative;border:1.5px solid var(--fg);background:var(--shade);aspect-ratio:16/10;width:100%;max-height:420px;padding:0;cursor:zoom-in;overflow:hidden;display:block}
+.cover img{width:100%;height:100%;object-fit:contain;display:block}
+.cover .badge{position:absolute;left:8px;top:8px;font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:var(--acid);color:#111;padding:2px 6px}
+.cover.none{cursor:default;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;aspect-ratio:16/6;border-style:dashed;color:var(--muted);text-align:center;padding:12px}
+.cover.none .big{font-family:var(--f-display);font-size:26px;text-transform:uppercase;color:var(--fg);opacity:.35}
+.cover.none small{font-family:var(--f-mono);font-size:11px;max-width:46ch}
+.files{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.file{border:1.5px solid var(--fg);background:var(--bg);display:flex;flex-direction:column;min-width:0}
+.thumb{aspect-ratio:4/3;width:100%;background:var(--shade);display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;border:0;padding:0;color:var(--fg)}
+.thumb img,.thumb video{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .ext{font-family:var(--f-display);font-size:30px;text-transform:uppercase}
+.fbody{padding:6px 8px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.fname{font-size:12px;font-weight:600;overflow-wrap:anywhere;line-height:1.3}
+.fsize{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.fbody .btn{padding:4px 7px;font-size:11px;align-self:flex-start}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.meta a.open{font-weight:700;color:var(--fg);text-decoration:none;border-bottom:2px solid var(--pink);padding-bottom:1px}
+.meta a.open:hover{background:var(--acid);color:#111}
+.path{font-family:var(--f-mono);font-size:12px;background:transparent;border:1px dashed var(--muted);color:var(--fg);padding:4px 8px;cursor:pointer;text-align:left;max-width:100%;overflow-wrap:anywhere;border-radius:0}
+.tags{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.empty{border:2px dashed var(--muted);padding:28px 18px;text-align:center;color:var(--muted)}
+.empty strong{display:block;font-family:var(--f-display);font-weight:400;font-size:28px;color:var(--fg);text-transform:uppercase}
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);font-family:var(--f-mono);font-size:12px;padding:9px 14px;max-width:calc(100vw - 40px);z-index:30}
+footer{font-family:var(--f-mono);font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+dialog{border:2px solid var(--fg);background:var(--card);color:var(--fg);padding:0;max-width:min(960px,calc(100vw - 24px));width:100%;border-radius:0}
+dialog::backdrop{background:#000000b3}
+.dhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.dhead strong{overflow-wrap:anywhere;font-size:14px;min-width:0}
+.dact{display:flex;gap:6px}
+.dbody{padding:12px;max-height:78vh;overflow:auto}
+.dbody img,.dbody video{max-width:100%;max-height:70vh;display:block;margin:0 auto;background:#000}
+.dbody pre{white-space:pre-wrap;overflow-wrap:anywhere;font-family:var(--f-mono);font-size:12px;margin:0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="kicker">Montage Studio · projet de Rayane</span>
+    <h1>Archive <span class="tape">des créas</span></h1>
+    <span class="scrawl">tout ce qu'on a fait ensemble</span>
+    <p class="lede">Chaque vidéo, visuel, fichier, musique et outil du projet montage. Touche un aperçu pour le voir en grand, et « Télécharger » pour l'enregistrer sur l'appareil que tu utilises.</p>
+    <div class="counts" id="counts"></div>
+  </header>
+  <div class="bar">
+    <label for="q" hidden>Chercher</label>
+    <input id="q" class="search" type="search" placeholder="Chercher : montagne, arcade, silhouette…" autocomplete="off">
+    <div class="filters" id="filters" role="group" aria-label="Filtrer par type"></div>
+  </div>
+  <main id="list"><div class="empty"><strong>Chargement</strong>Les créations du projet arrivent.</div></main>
+  <footer>Mis à jour par Claude à chaque création du projet « montage ».</footer>
+</div>
+<div class="toast" id="toast" hidden></div>
+<dialog id="viewer" aria-labelledby="vTitle">
+  <div class="dhead"><strong id="vTitle"></strong>
+    <div class="dact"><a class="btn" id="vDl" download>Télécharger</a><button type="button" class="btn" id="vClose">Fermer</button></div></div>
+  <div class="dbody" id="vBody"></div>
+</dialog>
+<script>
+const KINDS={video:"Vidéo",page:"Page",fichier:"Fichier",projet:"Projet",musique:"Musique",outil:"Outil",doc:"Doc",tache:"Tâche"};
+const MONTHS=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+const DAYS=["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+const TEXTLIKE=/\.(txt|md|json|csv|srt|yaml|yml|xml|edl)$/i, IMG=/\.(png|jpe?g|gif|webp|svg)$/i, VID=/\.(mp4|webm|mov)$/i, AUD=/\.(wav|mp3|m4a|ogg|flac)$/i;
+let entries=[], filter="tout", query="";
+try{const f=localStorage.getItem("arch-filter"); if(f) filter=f;}catch(e){}
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const url=p=>p.split("/").map(encodeURIComponent).join("/");
+const size=b=>!b?"":b>=1048576?(b/1048576).toFixed(1).replace(".",",")+" Mo":b>=1024?Math.round(b/1024)+" Ko":b+" o";
+const base=p=>p.split("/").pop();
+function toast(t){const el=$("#toast");el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,2200);}
+function fmtDay(d){const [y,m,dd]=d.split("-").map(Number);return {main:`${dd} ${MONTHS[m-1]} ${y}`,sub:DAYS[new Date(y,m-1,dd).getDay()]};}
+
+function renderFilters(){
+  const present=new Set(entries.map(e=>e.kind));
+  const keys=["tout",...Object.keys(KINDS).filter(k=>present.has(k))];
+  if(!keys.includes(filter)) filter="tout";
+  $("#filters").innerHTML=keys.map(k=>`<button type="button" class="btn" data-k="${k}" aria-pressed="${k===filter}">${k==="tout"?"Tout":KINDS[k]}</button>`).join("");
+}
+function cover(e){
+  if(e.apercu) return `<button type="button" class="cover" data-view="${esc(e.apercu)}" aria-label="Voir l'aperçu de ${esc(e.titre)} en grand"><img src="${url(e.apercu)}" alt="Aperçu : ${esc(e.titre)}" loading="lazy"><span class="badge">Aperçu</span></button>`;
+  return `<div class="cover none"><span class="big">${esc(KINDS[e.kind]||e.kind)}</span><small>Rendu PNG pas encore ajouté${e.chemin?" : le fichier est sur ton PC":""}</small></div>`;
+}
+function fileCard(f){
+  const p=f.chemin; let th=`<span class="ext">.${esc(p.split(".").pop())}</span>`;
+  if(IMG.test(p)) th=`<img src="${url(p)}" alt="" loading="lazy">`;
+  else if(VID.test(p)) th=`<video src="${url(p)}#t=0.5" preload="metadata" muted playsinline></video>`;
+  else if(f.apercu) th=`<img src="${url(f.apercu)}" alt="" loading="lazy">`;
+  return `<div class="file"><button type="button" class="thumb" data-view="${esc(p)}" aria-label="Voir ${esc(f.nom)}">${th}</button>
+    <div class="fbody"><span class="fname">${esc(f.nom)}</span><span class="fsize">${size(f.taille)}</span>
+    <a class="btn" href="${url(p)}" download="${esc(f.nom)}">Télécharger</a></div></div>`;
+}
+function render(){
+  renderFilters();
+  const nf=entries.reduce((a,e)=>a+(e.fichiers||[]).length,0);
+  $("#counts").innerHTML=`<span><b>${entries.length}</b> créations</span><span><b>${nf}</b> fichiers à télécharger</span>`;
+  const q=query.trim().toLowerCase();
+  const shown=entries.filter(e=>(filter==="tout"||e.kind===filter)&&(!q||[e.titre,e.resume,e.chemin,(e.tags||[]).join(" "),(e.fichiers||[]).map(f=>f.nom).join(" ")].join(" ").toLowerCase().includes(q)));
+  if(!shown.length){$("#list").innerHTML=`<div class="empty"><strong>Aucun résultat</strong>Essaie un autre mot ou repasse sur « Tout ».</div>`;return;}
+  const g=new Map(); shown.forEach(e=>{if(!g.has(e.date))g.set(e.date,[]);g.get(e.date).push(e);});
+  $("#list").innerHTML=[...g].map(([d,items])=>{const f=fmtDay(d);return `<section class="day"><h2>${f.main}<small>${f.sub} · ${items.length}</small></h2>`+
+    items.map(e=>{const fs=e.fichiers||[];return `<article class="entry${e.epingle?" pin":""}">
+      <div class="top"><h3>${esc(e.titre)}</h3><span class="chip k-${esc(e.kind)}">${esc(KINDS[e.kind]||e.kind)}</span></div>
+      ${cover(e)}
+      ${e.resume?`<p>${esc(e.resume)}</p>`:""}
+      ${fs.length?`<div class="files">${fs.map(fileCard).join("")}</div>`:""}
+      <div class="meta">
+        ${e.lien?`<a class="open" href="${esc(e.lien)}" target="_blank" rel="noopener">Ouvrir ↗</a>`:""}
+        ${e.chemin?`<button type="button" class="path" data-copy="${esc(e.chemin)}" title="Copier le chemin">Sur ton PC : ${esc(e.chemin)}</button>`:""}
+      </div>
+      ${e.tags&&e.tags.length?`<div class="tags">#${e.tags.map(esc).join(" #")}</div>`:""}
+    </article>`;}).join("")+`</section>`;}).join("");
+}
+async function view(p){
+  const name=base(p); $("#vTitle").textContent=name; const dl=$("#vDl"); dl.href=url(p); dl.setAttribute("download",name);
+  const b=$("#vBody");
+  if(IMG.test(p)) b.innerHTML=`<img src="${url(p)}" alt="${esc(name)}">`;
+  else if(VID.test(p)) b.innerHTML=`<video src="${url(p)}" controls playsinline preload="metadata"></video>`;
+  else if(AUD.test(p)) b.innerHTML=`<audio src="${url(p)}" controls style="width:100%"></audio>`;
+  else if(TEXTLIKE.test(p)){b.textContent="Chargement…";try{const t=await (await fetch(url(p))).text();const pre=document.createElement("pre");pre.textContent=t;b.replaceChildren(pre);}catch(_){b.textContent="Aperçu impossible : télécharge le fichier.";}}
+  else b.innerHTML=`<p>Pas d'aperçu pour ce format : télécharge-le pour l'ouvrir dans le bon logiciel.</p>`;
+  $("#viewer").showModal();
+}
+$("#vClose").onclick=()=>$("#viewer").close();
+$("#viewer").addEventListener("close",()=>{$("#vBody").innerHTML="";});
+$("#viewer").addEventListener("click",e=>{if(e.target===$("#viewer"))$("#viewer").close();});
+$("#list").addEventListener("click",async ev=>{
+  const v=ev.target.closest("[data-view]"); if(v) return view(v.dataset.view);
+  const c=ev.target.closest("[data-copy]"); if(c){try{await navigator.clipboard.writeText(c.dataset.copy);toast("Chemin copié");}catch(_){toast("Copie impossible ici");}}
+});
+$("#filters").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;filter=b.dataset.k;try{localStorage.setItem("arch-filter",filter);}catch(_){}render();});
+$("#q").addEventListener("input",e=>{query=e.target.value;render();});
+fetch("data.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
+  entries=d.sort((a,b)=>(b.date||"").localeCompare(a.date||"")||(b.ordre||0)-(a.ordre||0)); render();
+}).catch(()=>{$("#list").innerHTML=`<div class="empty"><strong>Chargement impossible</strong>Recharge la page.</div>`;});
+</script>
+</body>
+</html>

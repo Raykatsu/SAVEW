@@ -1,0 +1,378 @@
+[
+ {
+  "date": "2026-11-04",
+  "kind": "fichier",
+  "lien": "https://github.com/Raykatsu/montage-studio/tree/main/examples/arcade/planche-ia",
+  "ordre": 80,
+  "resume": "Ton perso fait avec une IA (planche à la chapka grise), passé en vrai pixel art : détourage, grille, palette commune, énergie en aplats. Il est placé sur le VS, le Round 1 et le K.O., avec un GIF des coups. Le premier sprite chibi redessiné a été mis de côté.",
+  "tags": [
+   "arcade",
+   "sprite",
+   "gif"
+  ],
+  "titre": "Sprites de ton perso pour l'arcade (planche IA)",
+  "id": "arcade-sprites-ia"
+ },
+ {
+  "chemin": "C:\\Users\\rayan\\Videos\\Montage\\_outils\\",
+  "date": "2026-10-28",
+  "kind": "fichier",
+  "ordre": 30,
+  "resume": "Config MCP à coller dans l'app Claude et lanceur .bat pour que Claude pilote FilmCraft directement.",
+  "tags": [
+   "filmcraft",
+   "mcp"
+  ],
+  "titre": "Connexion FilmCraft ↔ Claude",
+  "id": "connexion-filmcraft"
+ },
+ {
+  "date": "2026-11-04",
+  "epingle": true,
+  "fichiers": [
+   {
+    "nom": "DA-arcade.md",
+    "taille": 3984,
+    "type": "text/markdown",
+    "chemin": "fichiers/da-arcade/DA-arcade.md"
+   }
+  ],
+  "kind": "outil",
+  "lien": "https://github.com/Raykatsu/montage-studio/blob/main/docs/DA-arcade.md",
+  "ordre": 90,
+  "resume": "Jeu de combat rétro en pixel art à partir de tes photos. 9 écrans (sélection du perso, VS, combat, K.O., nouveau challenger, bonus, console 4 verts, 8 bits, victoire), en 4:5 et 9:16, avec calques PhotoCraft. Stats absurdes, coups spéciaux, citations de victoire.",
+  "tags": [
+   "arcade",
+   "pixel art",
+   "DA expérimentale"
+  ],
+  "titre": "DA arcade « HORS CHAMP FIGHTERS »",
+  "id": "da-arcade"
+ },
+ {
+  "chemin": "C:\\Users\\rayan\\Videos\\Montage\\3-BRANDING\\DA.md",
+  "date": "2026-10-29",
+  "kind": "doc",
+  "ordre": 75,
+  "resume": "Fichier vivant de la DA, lu au début de chaque montage. Copie de référence dans le dépôt : docs/DA-chaine.md.",
+  "tags": [
+   "DA"
+  ],
+  "titre": "DA.md, direction artistique",
+  "id": "da-fichier"
+ },
+ {
+  "apercu": "fichiers/da-planche/apercu-planche-da.png",
+  "date": "2026-10-29",
+  "epingle": true,
+  "fichiers": [
+   {
+    "nom": "da-piste-photocopie-zine.jpg",
+    "taille": 69623,
+    "type": "image/jpeg",
+    "chemin": "fichiers/da-planche/da-piste-photocopie-zine.jpg"
+   },
+   {
+    "nom": "da-piste-bd-vivante.jpg",
+    "taille": 128670,
+    "type": "image/jpeg",
+    "chemin": "fichiers/da-planche/da-piste-bd-vivante.jpg"
+   },
+   {
+    "nom": "da-piste-digicam-2006.jpg",
+    "taille": 81032,
+    "type": "image/jpeg",
+    "chemin": "fichiers/da-planche/da-piste-digicam-2006.jpg"
+   },
+   {
+    "nom": "da-texture-holo-jour-3.jpg",
+    "taille": 127900,
+    "type": "image/jpeg",
+    "chemin": "fichiers/da-planche/da-texture-holo-jour-3.jpg"
+   },
+   {
+    "nom": "da-arret-sur-image.jpg",
+    "taille": 123189,
+    "type": "image/jpeg",
+    "chemin": "fichiers/da-planche/da-arret-sur-image.jpg"
+   },
+   {
+    "nom": "da-lettres-decoupees-les-arcs.jpg",
+    "taille": 153495,
+    "type": "image/jpeg",
+    "chemin": "fichiers/da-planche/da-lettres-decoupees-les-arcs.jpg"
+   }
+  ],
+  "kind": "page",
+  "lien": "https://claude.ai/artifact/BA4tyzTB8ZEeMRq8AtB16V",
+  "ordre": 80,
+  "resume": "Direction artistique v1 de la chaîne : deux registres (base colorée / chaos fanzine), trois pistes, palette et typos.",
+  "tags": [
+   "DA",
+   "spider-punk",
+   "palette"
+  ],
+  "titre": "Planche DA « Zine des potes »",
+  "id": "da-planche"
+ },
+ {
+  "chemin": "C:\\Users\\rayan\\Videos\\Montage\\5-PROJETS\\demo-outils\\montage.yaml",
+  "date": "2026-10-29",
+  "kind": "video",
+  "ordre": 70,
+  "resume": "47 s, 14 animations EffectCraft, effets zine / BD, transitions créatives, musiques phonk et hyperpop générées. Vidéo envoyée dans la conversation.",
+  "tags": [
+   "démo",
+   "animations",
+   "effets"
+  ],
+  "titre": "Démo « Les Arcs - DA chaotique »",
+  "id": "demo-outils"
+ },
+ {
+  "chemin": "C:\\Users\\rayan\\Videos\\Montage\\5-PROJETS\\essai\\filmcraft\\essai-technique.fcproj",
+  "date": "2026-10-28",
+  "kind": "projet",
+  "ordre": 40,
+  "resume": "Projet test sur rushs synthétiques, ouvert avec succès dans FilmCraft.",
+  "tags": [
+   "filmcraft",
+   "test"
+  ],
+  "titre": "Projet de démo FilmCraft « essai-technique »",
+  "id": "essai-filmcraft"
+ },
+ {
+  "chemin": "C:\\Users\\rayan\\Videos\\Montage\\_outils\\montage-studio.zip",
+  "date": "2026-10-28",
+  "epingle": true,
+  "kind": "outil",
+  "lien": "https://github.com/Raykatsu/montage-studio",
+  "ordre": 90,
+  "resume": "L'outil `ms` : transcription, brouillon auto, rendu 16:9 et 9:16, sous-titres, musique générée, animations, effets, miniatures, export FilmCraft. Dépôt privé Raykatsu/montage-studio.",
+  "tags": [
+   "outil",
+   "github"
+  ],
+  "titre": "Montage Studio (boîte à outils)",
+  "id": "montage-studio"
+ },
+ {
+  "chemin": "C:\\Users\\rayan\\Videos\\Montage\\4-EXPORTS\\",
+  "date": "2026-10-28",
+  "kind": "fichier",
+  "ordre": 70,
+  "resume": "Livrables du vlog : miniatures, .srt, titre et description YouTube.",
+  "tags": [
+   "miniature",
+   "srt",
+   "youtube"
+  ],
+  "titre": "Miniatures, sous-titres et textes YouTube du vlog montagne",
+  "id": "montagne-exports"
+ },
+ {
+  "chemin": "C:\\Users\\rayan\\Videos\\Montage\\5-PROJETS\\montagne\\filmcraft\\",
+  "date": "2026-10-28",
+  "kind": "projet",
+  "ordre": 60,
+  "resume": "Projet .fcproj prêt à ouvrir (coupes, LUT par plan, musique avec ducking, SFX, sous-titres), plus .otio et .xml pour Premiere / Resolve.",
+  "tags": [
+   "filmcraft",
+   "otio"
+  ],
+  "titre": "Projet FilmCraft du vlog montagne",
+  "id": "montagne-filmcraft"
+ },
+ {
+  "chemin": "C:\\Users\\rayan\\Videos\\Montage\\2-MUSIQUE\\",
+  "date": "2026-10-29",
+  "kind": "musique",
+  "ordre": 60,
+  "resume": "Deux musiques générées pour la démo chaotique, libres de droits.",
+  "tags": [
+   "phonk",
+   "hyperpop"
+  ],
+  "titre": "Musiques demo-phonk et demo-hyperpop",
+  "id": "musiques-demo"
+ },
+ {
+  "chemin": "C:\\Users\\rayan\\Videos\\Montage\\2-MUSIQUE\\",
+  "date": "2026-10-28",
+  "kind": "musique",
+  "ordre": 50,
+  "resume": "Musiques générées pour le vlog : énergique pour le ski, chill pour l'appart et la forêt.",
+  "tags": [
+   "upbeat",
+   "chill"
+  ],
+  "titre": "Musiques montagne-upbeat et montagne-chill",
+  "id": "musiques-montagne"
+ },
+ {
+  "date": "2026-11-03",
+  "fichiers": [
+   {
+    "nom": "PHOTOCRAFT.md",
+    "taille": 3572,
+    "type": "text/markdown",
+    "chemin": "fichiers/photocraft-calques/PHOTOCRAFT.md"
+   }
+  ],
+  "kind": "outil",
+  "lien": "https://github.com/Raykatsu/montage-studio/blob/main/docs/PHOTOCRAFT.md",
+  "ordre": 90,
+  "resume": "Ajout à la boîte à outils : chaque image livrée (affiche, montage photo, planche) a aussi sa version .pcraft. Chaque élément y est sur un calque séparé, nommé en français, et les textes restent modifiables. Fichiers jusqu'à 40 % plus légers, styles sur les formes (ombre, dégradé).",
+  "tags": [
+   "photocraft",
+   "calques",
+   "retouche"
+  ],
+  "titre": "Module PhotoCraft en calques",
+  "id": "photocraft-calques"
+ },
+ {
+  "apercu": "fichiers/qg-equipe/apercu-qg.png",
+  "date": "2026-10-29",
+  "epingle": true,
+  "kind": "page",
+  "lien": "https://claude.ai/artifact/T2WrqwvkrogW7ZCrYRyydg",
+  "ordre": 90,
+  "resume": "L'équipe d'agents en petits bonhommes : qui travaille sur quoi, avancement, étape du montage. Tu parles à chaque membre et tu lis le fil des échanges.",
+  "tags": [
+   "équipe",
+   "agents"
+  ],
+  "titre": "QG de l'équipe de montage",
+  "id": "qg-equipe"
+ },
+ {
+  "apercu": "fichiers/silhouette-corrigee/silhouette-corrigee-apres.png",
+  "date": "2026-11-01",
+  "fichiers": [
+   {
+    "nom": "silhouette-corrigee-apres.jpg",
+    "taille": 84614,
+    "type": "image/jpeg",
+    "chemin": "fichiers/silhouette-corrigee/silhouette-corrigee-apres.jpg"
+   },
+   {
+    "nom": "silhouette-corrigee-avant.jpg",
+    "taille": 109061,
+    "type": "image/jpeg",
+    "chemin": "fichiers/silhouette-corrigee/silhouette-corrigee-avant.jpg"
+   }
+  ],
+  "kind": "fichier",
+  "ordre": 110,
+  "resume": "Ta version du 1er novembre retouchée dans PhotoCraft : lueur blanche autour du perso, passage en noir et blanc, fond assombri en nuit bleue.",
+  "tags": [
+   "photocraft",
+   "retouche",
+   "visuel"
+  ],
+  "titre": "Silhouette lumineuse corrigée",
+  "id": "silhouette-corrigee"
+ },
+ {
+  "apercu": "fichiers/tuto-corriger-silhouette/apercu-tuto-corriger.png",
+  "date": "2026-11-01",
+  "kind": "page",
+  "lien": "https://claude.ai/artifact/DKtXWN2Hu9dki3ZXH64Ji5",
+  "ordre": 100,
+  "resume": "Tuto débutant PhotoCraft sur ton fichier du 1er novembre : toutes les corrections dans l'ordre, avec les vraies captures de ton écran, des repères rouges numérotés et un avant / après.",
+  "tags": [
+   "photocraft",
+   "tuto",
+   "retouche"
+  ],
+  "titre": "Tuto « Corriger la silhouette lumineuse »",
+  "id": "tuto-corriger-silhouette"
+ },
+ {
+  "apercu": "fichiers/tuto-silhouette/apercu-tuto-silhouette.png",
+  "date": "2026-10-29",
+  "kind": "page",
+  "lien": "https://claude.ai/artifact/XAbSPFbDPdM6FKNgh34hwj",
+  "ordre": 110,
+  "resume": "Tuto en 7 étapes avec captures : comment la photo de plage est devenue le visuel 02 « silhouette lumineuse », et comment le refaire dans PhotoCraft.",
+  "tags": [
+   "photocraft",
+   "tuto",
+   "DA expérimentale"
+  ],
+  "titre": "Tuto « Silhouette lumineuse »",
+  "id": "tuto-silhouette"
+ },
+ {
+  "date": "2026-10-29",
+  "kind": "tache",
+  "ordre": 50,
+  "resume": "Tâche planifiée chaque dimanche à 18 h 41 : tendances de la semaine, nouvel outil testé, mise à jour de la DA et résumé envoyé.",
+  "tags": [
+   "veille",
+   "tendances"
+  ],
+  "titre": "Veille montage hebdo",
+  "id": "veille-hebdo"
+ },
+ {
+  "apercu": "fichiers/visuel-02-silhouette/visuel-02-silhouette-lumineuse.png",
+  "date": "2026-10-29",
+  "epingle": true,
+  "fichiers": [
+   {
+    "nom": "visuel-02-silhouette-lumineuse.jpg",
+    "taille": 109042,
+    "type": "image/jpeg",
+    "chemin": "fichiers/visuel-02-silhouette/visuel-02-silhouette-lumineuse.jpg"
+   },
+   {
+    "nom": "visuel-02-photo-originale.jpg",
+    "taille": 55411,
+    "type": "image/jpeg",
+    "chemin": "fichiers/visuel-02-silhouette/visuel-02-photo-originale.jpg"
+   }
+  ],
+  "kind": "fichier",
+  "ordre": 120,
+  "resume": "Ta photo de prière face au soleil devenue une silhouette de lumière sur une nuit bleue, en 9:16 pour les stories et TikTok. DA expérimentale.",
+  "tags": [
+   "DA expérimentale",
+   "photocraft",
+   "visuel"
+  ],
+  "titre": "Visuel 02 « Silhouette lumineuse »",
+  "id": "visuel-02-silhouette"
+ },
+ {
+  "chemin": "C:\\Users\\rayan\\Videos\\Montage\\5-PROJETS\\montagne\\",
+  "date": "2026-10-28",
+  "epingle": true,
+  "kind": "video",
+  "ordre": 80,
+  "resume": "4 min 33, 50 plans. Ski avec les gars (janvier 2025), cartons JOUR 1 à 7, accroche du « professionnel », mème du couloir et vocal Snap « C'EST QUOI ÇA ENCORE ». Vidéo téléchargeable depuis la conversation.",
+  "tags": [
+   "vlog",
+   "youtube",
+   "ski"
+  ],
+  "titre": "Vlog « Une semaine à la montagne »",
+  "id": "vlog-montagne"
+ },
+ {
+  "id": "site-archive",
+  "titre": "Site de l'archive (ce site)",
+  "kind": "page",
+  "date": "2026-11-06",
+  "ordre": 100,
+  "resume": "Le site GitHub où tu retrouves et télécharges tout ce qu'on crée dans le projet montage, depuis n'importe quel appareil.",
+  "tags": [
+   "archive",
+   "github"
+  ],
+  "apercu": "fichiers/site-archive/apercu-site.png",
+  "lien": "https://raykatsu.github.io/archive-montage/"
+ }
+]
