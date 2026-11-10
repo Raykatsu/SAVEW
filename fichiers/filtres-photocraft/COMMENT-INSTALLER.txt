@@ -1,0 +1,33 @@
+FILTRES MAISON POUR PHOTOCRAFT (HORS CHAMP)
+===========================================
+4 filtres : Console de poche…, 8 bits…, Écran cathodique…, Trame zine…
+Ils s'ajoutent dans Filtre › Plug-ins (Filter › Plug-ins), avec leur fenêtre de réglages
+et l'aperçu en direct, comme les filtres déjà là. Ils marchent sur Windows, Mac et Linux.
+
+INSTALLER (une seule fois)
+1. Crée un dossier pour tes filtres, par exemple :
+   C:\Users\rayan\Videos\Montage\_outils\filtres-photocraft
+2. Mets-y les 4 fichiers .wasm de ce zip.
+3. Dans PhotoCraft : Édition › Préférences › Plug-ins (Edit › Preferences › Plug-ins).
+   Coche « Use Additional Plug-ins Folder », puis choisis ton dossier
+   dans « Additional Plug-ins Folder ».
+4. Les 4 filtres apparaissent dans Filtre › Plug-ins, et ils reviennent à chaque démarrage.
+   (Filtre › Plug-ins › Install Plug-in… marche aussi, mais seulement jusqu'à ce que tu fermes PhotoCraft.)
+
+UTILISER
+- Clique sur le calque, puis Filtre › Plug-ins › le filtre. Règle, regarde l'aperçu, OK.
+- Astuce : fais d'abord clic droit sur le calque › Convertir en objet dynamique
+  (Convert to Smart Object). Le filtre reste alors modifiable : double-clic dessus dans les calques.
+- Couleurs (RVB) et niveaux de gris : oui. CMJN et Lab : non.
+
+LES RÉGLAGES
+Console de poche…  taille (des gros pixels), palette (vert, gris sombre, gris clair, bleu nuit, sépia),
+                   contraste, luminosite, sombre (assombrit), relief (fait ressortir le visage),
+                   trame (petits points entre les nuances), grille (lignes de l'écran).
+                   Photo de nuit : luminosite 20, relief 80, contraste 1.4.
+8 bits…            taille, palette (console 8 bits, 16 couleurs, pastel 16), trame, saturation,
+                   contraste, luminosite, relief.
+Écran cathodique…  lignes (écart entre les lignes), intensite (lignes plus sombres), decalage
+                   (couleurs décalées), masque (petites bandes rouge/vert/bleu), vignette (coins sombres), bruit.
+Trame zine…        taille (des points), angle, contraste, luminosite, grain, encre (noir, rouge,
+                   bleu, rose fluo, vert), papier (blanc cassé, jaune, rose, kraft, gris).

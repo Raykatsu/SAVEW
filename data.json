@@ -374,5 +374,94 @@
   ],
   "apercu": "fichiers/site-archive/apercu-site.png",
   "lien": "https://raykatsu.github.io/SAVEW/"
+ },
+ {
+  "id": "filtres-photocraft",
+  "titre": "Filtres maison pour PhotoCraft",
+  "kind": "outil",
+  "date": "2026-11-10",
+  "ordre": 95,
+  "epingle": true,
+  "resume": "4 filtres à installer dans PhotoCraft, qui s'ajoutent dans Filtre › Plug-ins avec réglages et aperçu en direct : Console de poche (vert, gris sombre, bleu nuit, sépia…), 8 bits, Écran cathodique et Trame zine. Installation : les .wasm dans un dossier, puis Édition › Préférences › Plug-ins (mode d'emploi dans le zip).",
+  "tags": [
+   "photocraft",
+   "filtres",
+   "pixel art",
+   "plug-ins"
+  ],
+  "lien": "https://github.com/Raykatsu/montage-studio/tree/main/photocraft-plugins",
+  "apercu": "fichiers/filtres-photocraft/apercu-filtres.png",
+  "fichiers": [
+   {
+    "nom": "8-bits.wasm",
+    "taille": 6090,
+    "type": "application/wasm",
+    "chemin": "fichiers/filtres-photocraft/8-bits.wasm"
+   },
+   {
+    "nom": "COMMENT-INSTALLER.txt",
+    "taille": 2249,
+    "type": "text/plain",
+    "chemin": "fichiers/filtres-photocraft/COMMENT-INSTALLER.txt"
+   },
+   {
+    "nom": "Filtres-PhotoCraft_HORS-CHAMP.zip",
+    "taille": 455405,
+    "type": "application/zip",
+    "chemin": "fichiers/filtres-photocraft/Filtres-PhotoCraft_HORS-CHAMP.zip"
+   },
+   {
+    "nom": "console-de-poche.wasm",
+    "taille": 6906,
+    "type": "application/wasm",
+    "chemin": "fichiers/filtres-photocraft/console-de-poche.wasm"
+   },
+   {
+    "nom": "ecran-cathodique.wasm",
+    "taille": 3838,
+    "type": "application/wasm",
+    "chemin": "fichiers/filtres-photocraft/ecran-cathodique.wasm"
+   },
+   {
+    "nom": "trame-zine.wasm",
+    "taille": 5066,
+    "type": "application/wasm",
+    "chemin": "fichiers/filtres-photocraft/trame-zine.wasm"
+   }
+  ]
+ },
+ {
+  "id": "perso-secret-nuit",
+  "titre": "Personnage secret, version nuit (LA CAPUCHE)",
+  "kind": "fichier",
+  "date": "2026-11-10",
+  "ordre": 85,
+  "resume": "L'écran « PERSONNAGE SECRET » de HORS CHAMP FIGHTERS refait avec ta photo à la capuche, en 4 gris sombres tramés, cartouches noirs. « LA CAPUCHE UTILISE MODE NUIT ! ÇA NE MARCHE PAS : IL FAIT DÉJÀ NUIT. » En 4:5 et 9:16, avec calques PhotoCraft.",
+  "tags": [
+   "arcade",
+   "pixel art",
+   "noir et blanc"
+  ],
+  "apercu": "fichiers/perso-secret-nuit/apercu-perso-secret-nuit.png",
+  "fichiers": [
+   {
+    "nom": "perso-secret-nuit_4x5.jpg",
+    "taille": 758669,
+    "type": "image/jpeg",
+    "chemin": "fichiers/perso-secret-nuit/perso-secret-nuit_4x5.jpg"
+   },
+   {
+    "nom": "perso-secret-nuit_9x16.jpg",
+    "taille": 963164,
+    "type": "image/jpeg",
+    "chemin": "fichiers/perso-secret-nuit/perso-secret-nuit_9x16.jpg"
+   },
+   {
+    "nom": "perso-secret-nuit_PhotoCraft.zip",
+    "taille": 1967768,
+    "type": "application/zip",
+    "chemin": "fichiers/perso-secret-nuit/perso-secret-nuit_PhotoCraft.zip"
+   }
+  ]
  }
 ]
