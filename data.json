@@ -463,5 +463,40 @@
     "chemin": "fichiers/perso-secret-nuit/perso-secret-nuit_PhotoCraft.zip"
    }
   ]
+ },
+ {
+  "id": "rien-a-signaler",
+  "titre": "« Rien à signaler. » (riso du sauveteur)",
+  "kind": "fichier",
+  "date": "2026-11-12",
+  "ordre": 90,
+  "resume": "Photo du sauveteur aux jumelles en impression riso 2 couleurs (bleu + orange fluo sur papier crème) : trame, grain, encres décalées, titre en réserve dans le ciel, légende « 14H32 — MER CALME. / SAUF UN NUAGE. ». En 4:5 et 9:16, avec calques PhotoCraft.",
+  "tags": [
+   "riso",
+   "textures",
+   "zine"
+  ],
+  "lien": "https://github.com/Raykatsu/montage-studio/tree/main/examples/riso",
+  "apercu": "fichiers/rien-a-signaler/apercu-rien-a-signaler.png",
+  "fichiers": [
+   {
+    "nom": "rien-a-signaler_4x5.jpg",
+    "taille": 5966271,
+    "type": "image/jpeg",
+    "chemin": "fichiers/rien-a-signaler/rien-a-signaler_4x5.jpg"
+   },
+   {
+    "nom": "rien-a-signaler_9x16.jpg",
+    "taille": 8682096,
+    "type": "image/jpeg",
+    "chemin": "fichiers/rien-a-signaler/rien-a-signaler_9x16.jpg"
+   },
+   {
+    "nom": "rien-a-signaler_PhotoCraft.zip",
+    "taille": 70377747,
+    "type": "application/zip",
+    "chemin": "fichiers/rien-a-signaler/rien-a-signaler_PhotoCraft.zip"
+   }
+  ]
  }
 ]
